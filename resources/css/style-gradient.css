@@ -52,8 +52,8 @@ a:hover {
   top: 0;
   bottom: 0;
   opacity: 0.85;
-  background: rgb(19,139,79);
-  background: -moz-linear-gradient(top, rgba(20, 140, 80, 1) 0%, rgba(20, 80, 140, 1) 100%);
-  background: -webkit-linear-gradient(top, rgba(20, 140, 80, 1) 0%,rgba(20, 80, 140, 1) 100%);
-  background: linear-gradient(to bottom, rgba(20, 140, 80, 1) 0%,rgba(20, 80, 140, 1) 100%);
+  background: #C8A2C8;
+  background: -moz-linear-gradient(top, #C8A2C8 0%, #5F4288 100%);
+  background: -webkit-linear-gradient(top, #C8A2C8 0%, #5F4288  100%);
+  background: linear-gradient(to bottom, #C8A2C8 0%,#5F4288 100%);
 }
