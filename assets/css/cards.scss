@@ -1,0 +1,214 @@
+.card2 {
+    display: block;
+    position: relative;
+    border-radius: 10px;
+    // padding: 32px 24px;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    border: 1px solid #f2f8f9;
+    &:hover {
+        transition: all 0.5s ease-out;
+        box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+        top: -4px;
+        border: 1px solid #cccccc;
+        background-color: white;
+        text-decoration: none!important;
+    }
+    // &:before {
+    //     content: "";
+    //     position: absolute;
+    //     z-index: -1;
+    //     top: -16px;
+    //     right: -16px;
+    //     background: #00838d;
+    //     height: 32px;
+    //     width: 32px;
+    //     border-radius: 32px;
+    //     transform: scale(2);
+    //     transform-origin: 50% 50%;
+    //     transition: transform 0.15s ease-out;
+    // }
+    &:hover:before {
+        transform: scale(2.15);
+    }
+}
+
+$boxSpacing: 23px;
+$gridSize: 200px;
+$cornerRadius: $gridSize/2.1;
+* {
+    box-sizing: border-box;
+}
+
+.w3l-customers-11 .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($gridSize, $gridSize));
+    grid-auto-rows: $gridSize;
+    grid-auto-flow: row dense;
+    grid-gap: $boxSpacing;
+    justify-content: center;
+}
+
+.card-top,
+.card-right,
+.card-bottom,
+.card-left {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    width: 100%;
+    border-radius: $cornerRadius;
+    box-shadow: 0px 3px 9px 1px rgba(112, 112, 112, 0.623);
+    background-color: rgb(53, 53, 53);
+    &:hover {
+        transition: all 0.7s ease-out;
+        box-shadow: 0px 4px 8px rgb(143, 143, 143);
+        top: -4px;
+        border: 5px solid rgb(187, 187, 187);
+        background-color: rgb(187, 187, 187);
+        text-decoration: none!important;
+        color: rgb(49, 49, 49)!important;
+    }
+}
+
+.card-top {
+    flex-direction: column;
+    grid-column: auto / span 1;
+    grid-row: auto / span 2;
+}
+
+.card-right {
+    flex-direction: row-reverse;
+    grid-column: auto / span 2;
+    grid-row: auto / span 1;
+}
+
+.card-bottom {
+    flex-direction: column-reverse;
+    grid-column: auto / span 1;
+    grid-row: auto / span 2;
+}
+
+.card-left {
+    flex-direction: row;
+    grid-column: auto / span 2;
+    grid-row: auto / span 1;
+}
+
+.card-image {
+    display: flex;
+}
+
+.card-top .card-image,
+.card-bottom .card-image {
+    height: 50%;
+    width: 100%;
+}
+
+.card-left .card-image,
+.card-right .card-image {
+    height: 100%;
+    width: 50%;
+}
+
+.card-image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-top img {
+    border-radius: $cornerRadius $cornerRadius 0 0;
+}
+
+.card-right img {
+    border-radius: 0 $cornerRadius $cornerRadius 0;
+}
+
+.card-bottom img {
+    border-radius: 0 0 $cornerRadius $cornerRadius;
+}
+
+.card-left img {
+    border-radius: $cornerRadius 0 0 $cornerRadius;
+}
+
+.card-text {
+    align-self: center;
+    padding: $boxSpacing;
+}
+
+.card-top .card-text {
+    height: auto;
+    width: auto;
+    padding-bottom: $boxSpacing*1.6;
+}
+
+.card-right .card-text {
+    height: auto;
+    width: 50%;
+    padding-left: $boxSpacing*1.6;
+}
+
+.card-bottom .card-text {
+    height: auto;
+    width: auto;
+    padding-top: $boxSpacing*1.6;
+}
+
+.card-left .card-text {
+    height: auto;
+    width: 50%;
+    padding-right: $boxSpacing*1.6;
+}
+
+.card-text p {
+    margin: 0;
+    line-height: 1.35em;
+    color: #ffffff;
+}
+
+@media (max-width: 500px) {
+    .card-top {
+        flex-direction: row;
+        grid-column: auto / span 2;
+        grid-row: auto / span 1;
+    }
+    .card-bottom {
+        flex-direction: row-reverse;
+        grid-column: auto / span 2;
+        grid-row: auto / span 1;
+    }
+    .card-top .card-image,
+    .card-bottom .card-image {
+        height: 100%;
+        width: 50%;
+    }
+    .card-top img {
+        border-radius: $cornerRadius 0 0 $cornerRadius;
+    }
+    .card-bottom img {
+        border-radius: 0 $cornerRadius $cornerRadius 0;
+    }
+    .card-top .card-text {
+        height: auto;
+        width: 50%;
+        padding-right: $boxSpacing*1.6;
+    }
+    .card-bottom .card-text {
+        height: auto;
+        width: 50%;
+        padding-left: $boxSpacing*1.6;
+    }
+}
+
+@media (max-width: 400px) {
+    .card-image {
+        width: 38% !important;
+    }
+    .card-text {
+        width: 62% !important;
+    }
+}
