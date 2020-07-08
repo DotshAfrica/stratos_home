@@ -22,6 +22,7 @@ html {
     background-repeat: no-repeat;
     background-position: center;
     background-position: 50% 50%;
+    overflow: hidden!important;
 }
 
 .wrapper {
@@ -3579,7 +3580,7 @@ p {
 
 #section07 a span {
     position: absolute;
-    bottom: 40px;
+    /* bottom: 40px; */
     left: 50%;
     width: 26px;
     height: 26px;
@@ -3600,13 +3601,13 @@ p {
 }
 
 #section07 a span:nth-of-type(2) {
-    bottom: 24px;
+    /* bottom: 24px; */
     -webkit-animation-delay: .15s;
     animation-delay: .15s;
 }
 
 #section07 a span:nth-of-type(3) {
-    bottom: 8px;
+    /* bottom: 8px; */
     -webkit-animation-delay: .3s;
     animation-delay: .3s;
 }
@@ -4463,7 +4464,7 @@ p {
 
 .w3l-services-1 .services1-content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
 }
 
@@ -4605,8 +4606,8 @@ a:hover {
 .w3l-services-1 .service-info p {
     font-size: 16px;
     line-height: 22px;
-    color: #777777;
-    max-width: 255px;
+    /* color: #777777; */
+    /* max-width: 255px; */
     margin: auto;
     margin-top: 10px;
 }
@@ -5107,8 +5108,9 @@ a:hover {
 }
 
 .w3l-footer-16 .w3l-footer-16-main {
-    background: #ffffff;
+    background: darkslateblue;
     padding: 4em 0;
+    color: white!important;
 }
 
 .w3l-footer-16 .w3l-footer-16-main h3 {
@@ -5149,12 +5151,12 @@ a:hover {
     font-weight: normal;
     font-size: 16px;
     line-height: 25px;
-    color: #b0adad;
+    /* color: #b0adad; */
     margin-top: 20px;
 }
 
 .w3l-footer-16 .w3l-footer-16-main p a {
-    color: #b0adad;
+    color: white!important;
 }
 
 .w3l-footer-16 .grid {
@@ -9042,7 +9044,7 @@ img.img-email {
 
 @media only screen and (max-width: 568px) {
     .container {
-        width: 525px !important;
+        width: 90% !important;
     }
     .header-email {
         width: 545px;
@@ -9054,7 +9056,7 @@ img.img-email {
 
 @media only screen and (max-width: 480px) {
     .container {
-        width: 200px !important;
+        width: 90% !important;
     }
     .container-middle {
         width: 400px;
@@ -9147,7 +9149,7 @@ img.img-email {
         height: 10px;
     }
     .container {
-        width: 380px !important;
+        width: 90% !important;
     }
     .w3l_logo_left {
         width: 20px !important;
@@ -9190,7 +9192,7 @@ img.img-email {
         width: 330px !important;
     }
     .container {
-        width: 330px !important;
+        width: 90% !important;
     }
     table.logo {
         width: 175px !important;
@@ -9220,7 +9222,7 @@ img.img-email {
         width: 280px !important;
     }
     .container {
-        width: 280px !important;
+        width: 90% !important;
     }
     table.dairy {
         width: 250px !important;
